@@ -1,0 +1,124 @@
+<header id="header" class="d-flex align-items-center bg-once ">
+    <div class="container d-flex align-items-center justify-content-between">
+
+        <div class="logo">
+            <!-- <h1><a [routerLink]="index.html"><span>Bootslander</span></a></h1> -->
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <a [routerLink]="['/home']"><img src="/assets/img/logo.jpeg" alt="" class="img-fluid"></a>
+        </div>
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto text-green" [routerLink]="['/home/page-documentation']">DOCUMENTATION</a></li>
+                <li><a class="nav-link scrollto text-green" [routerLink]="['/home/page-commercant']">COMMERCANT</a></li>
+                <li><a class="nav-link scrollto text-dark-green active" [routerLink]="['/home/page-client']">PARTICULIER</a></li>
+                <li><a class="nav-link scrollto text-green" [routerLink]="['/home/page-contact']">CONTACT</a></li>
+                <li><a class="nav-link scrollto text-dark-green" [routerLink]="['/auth/login']">connexion</a></li>
+                <li><a class="nav-link scrollto btn btn-sm btn-new-account mx-3 px-2 py-1 text-dark-green" [routerLink]="['/auth/register']">creer un compte</a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle text-dark-green"></i>
+        </nav>
+        <!-- .navbar -->
+
+    </div>
+</header>
+<div class="hero ">
+    <div class="grid-container part-hero">
+        <div class="container-fluid home-footer p-5">
+            <div class="row mb-5">
+                <div class="col-md-6 col-sm-12">
+                    <div class="px-5">
+                        <h1 class="text-white fw-xl">
+                            Tranche Pay, Payez vos achats à votre rythme !
+                        </h1>
+                        <p class="text-white">
+                            Répartir votre paiement en plusieurs fois, c'est simple comme bonjour ! Aussi facile que d'effectuer un achat au comptant
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 d-sm-none d-md-block">
+                    <div style="position: absolute; right: 20%; top: 100px">
+                        <img src="/assets/img/hero-img.png" width="400" alt="HERO IMAGE">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container mt-5">
+    <div class="row col-12">
+        <div class="col-md-6 col-sm-12">
+            <section class="details">
+                <div class="container">
+                    <div class="row content">
+                        <div class="col-md-12 pt-4" data-aos="fade-up">
+                            <h3>Comment bénéficier du paiement en plusieurs fois?</h3>
+                            <ul>
+                                <li><i class="bi bi-check"></i> Choisissez Tranche Pay lors de votre passage en caisse.
+                                </li>
+                                <li><i class="bi bi-check"></i> Entrez simplement vos informations de paiement comme avec un paiement classique.</li>
+                                <li><i class="bi bi-check"></i> La validation est instantané.</li>
+                            </ul>
+                            <p class="card card-body shadow raduis-sm bold">
+                                Une fois votre commande confirmée, nous vous facturons le premier versement (Minimum ⅓ du montant de la commande)
+
+                            </p>
+                            <ul>
+                                <li><i class="bi bi-check"></i> Pour les autres tranches, vous vous connectez sur votre compte Tranche-Pay via l’application Mobile/Web pour effectuer les versements.</li>
+                                <li><i class="bi bi-check"></i> Les sommes des versements et les dates ne sont pas fixées. Vous avez la possibilité de choisir les sommes de vos versements et pouvez les effectuer quand vous voulez.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="row justify-content-between">
+        <div class="col-md-6 col-sm-12" data-aos="fade-right">
+            <img src="/assets/img/pourquoi_tranche_pay.png" width="100%" alt="POURQUOI TRANSPAY">
+        </div>
+        <div class="col-md-6 col-sm-12 mt-5 text-start" data-aos="fade-left">
+            <h3 class="bold text-green fw-x">Pourquoi Tranche Pay ?</h3>
+
+            <section class="details">
+                <div class="container">
+                    <div class="row content">
+                        <div class="col-md-12">
+
+                            <ul>
+                                <li><i class="bi bi-check"></i> Achetez l’esprit libre.</li>
+                            </ul>
+                            <p>
+                                Tranche Pay est une alternative au crédit qui te donne la possibilité d’acheter ce que vous voulez, quand vous voulez, tout en gardant le contrôle de vos économies. Vous êtes libre de payer quand vous voulez, comme vous voulez.
+                            </p>
+                            <ul>
+                                <li><i class="bi bi-check"></i> Simple et rapide.</li>
+                            </ul>
+                            <p>
+                                Le passage en caisse est simple, transparent, efficace. Seules les informations personnelles basiques sont requises pour créer votre compte.
+                            </p>
+                            <ul>
+                                <li><i class="bi bi-check"></i> Un catalogue très varié.</li>
+                            </ul>
+                            <p>
+                                Nous travaillons en partenariat avec plusieurs marchands pour vous permettre d’étaler le paiement de vos achats en versements faciles à gérer.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <section class="about">
+        <div class="container my-3">
+            <div class="card card-body green-color shadow-sm raduis-sm">
+                <div class="text-center icon-boxes d-flex flex-column px-5 justify-content-center py-3">
+                    <h4 class=" text-tranche text-white">Vous avez une question spécifique à nous poser</h4>
+                    <p style="margin: auto; width: 60%" class="text-white">Esse voluptas cumque vel exercitationem. Reiciendis est hic accusamus. Non ipsam et sed minima temporibus laudantium. Soluta voluptate sed.</p>
+                    <button class="btn-jum my-2 btn btn-sm shadow bg-white text-dark-green p-2">CONTACTEZ-NOUS</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

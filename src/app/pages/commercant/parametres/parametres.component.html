@@ -1,0 +1,109 @@
+<div class="container-fluid">
+    <nz-card class="shadow my-3">
+        <nz-tabset nzSize="large">
+            <nz-tab [nzTitle]="'Général'">
+                <h1>???</h1>
+            </nz-tab>
+            <nz-tab [nzTitle]="'Société'">
+                <h1>???</h1>
+            </nz-tab>
+            <nz-tab [nzTitle]="'Personnes'">
+                <h1>???</h1>
+            </nz-tab>
+            <nz-tab [nzTitle]="'Compte Bancaire'">
+                <div class="row my-3">
+                    <div class="col-12">
+                        <div class="section-title">
+                            <h1>Coordonnées bancaire</h1>
+                        </div>
+                    </div>
+                    <div class="row my-3 card-body card">
+                        <div class="col">
+                            <form nz-form [formGroup]="validateFormAddCB" (ngSubmit)="submitFormAddCB()">
+                                <nz-form-item>
+                                    <nz-form-label [nzSm]="12" [nzXs]="12" nzRequired nzFor="iban">IBAN</nz-form-label>
+                                    <nz-form-control [nzSm]="24" [nzXs]="24" nzErrorTip="The input is not valid
+                                        E-mail!">
+                                        <input nz-input formControlName="iban" id="iban" />
+                                    </nz-form-control>
+                                </nz-form-item>
+                                <nz-form-item>
+                                    <nz-form-label [nzSm]="12" [nzXs]="12" nzFor="bic" nzRequired>BIC</nz-form-label>
+                                    <nz-form-control [nzSm]="12" [nzXs]="12" nzErrorTip="Please input your
+                                        password!">
+                                        <input nz-input type="text" id="bic" formControlName="bic" />
+                                    </nz-form-control>
+                                </nz-form-item>
+                                <nz-form-item>
+                                    <nz-form-label [nzSm]="12" [nzXs]="12" nzFor="nom" nzRequired>Nom du propriétaire du compte bancaire</nz-form-label>
+                                    <nz-form-control [nzSm]="12" [nzXs]="12" [nzErrorTip]="'Le nom est requi'">
+                                        <input nz-input type="text" formControlName="nom" id="nom" />
+                                    </nz-form-control>
+                                </nz-form-item>
+                                <nz-form-item>
+                                    <nz-form-label [nzSm]="12" [nzXs]="12" nzFor="type" nzRequired nzTooltipTitle="What do you want other
+                                        to
+                                        call you">
+                                        <span>Type</span>
+                                    </nz-form-label>
+                                    <nz-form-control [nzSm]="12" [nzXs]="12" nzErrorTip="Please input your
+                                        nickname!">
+                                        <input nz-input id="type" formControlName="type" />
+                                    </nz-form-control>
+                                </nz-form-item>
+                                <nz-form-item>
+                                    <nz-form-label [nzSm]="12" [nzXs]="12" nzFor="libelle">Libellé des virements</nz-form-label>
+                                    <nz-form-control [nzSm]="12" [nzXs]="12" nzErrorTip="Please input website!">
+                                        <input nz-input id="libelle" formControlName="libelle" placeholder="website" />
+                                    </nz-form-control>
+                                </nz-form-item>
+                                <button nz-button nzType="primary">Valider</button>
+                            </form>
+                        </div>
+                    </div>
+                    <nz-alert nzType="info" nzMessage="Informational Notes" nzDescription="Additional description and informations
+                        about copywriting." nzShowIcon></nz-alert>
+                </div>
+            </nz-tab>
+            <nz-tab [nzTitle]="'Marque'">
+                <h1>???</h1>
+            </nz-tab>
+            <nz-tab nzTitle="Sécurité">
+                <div class="row alig-items-center justify-content-center">
+                    <div class="col-6">
+                        <div class="card shadow-sm">
+                            <div class="card-header">
+                                <h3>Changer votre mot de passe</h3>
+                            </div>
+                            <div class="card-body">
+                                <form nz-form [nzLayout]="'vertical'" [formGroup]="changePasswordValidForm" (ngSubmit)="submitCPForm()">
+                                    <nz-form-item>
+                                        <nz-form-label [nzSm]="24" [nzXs]="24" nzRequired nzFor="email">Nouveau mot de passe</nz-form-label>
+                                        <nz-form-control [nzSm]="24" [nzXs]="24" nzErrorTip="The input is not valid
+                                            E-mail!">
+                                            <input nz-input formControlName="password" id="email" type="password">
+                                        </nz-form-control>
+                                    </nz-form-item>
+                                    <nz-form-item>
+                                        <nz-form-label [nzSm]="24" [nzXs]="24" nzRequired nzFor="email">Confirmer le mot de passe</nz-form-label>
+                                        <nz-form-control [nzSm]="24" [nzXs]="24" nzErrorTip="The input is not valid
+                                            E-mail!">
+                                            <input nz-input formControlName="password_confirmation" id="email" type="password" />
+                                        </nz-form-control>
+                                    </nz-form-item>
+                                    <nz-form-item>
+                                        <nz-form-control>
+                                            <button nz-button nzType="primary" [disabled]="!changePasswordValidForm.valid">Log
+                                                in</button>
+                                        </nz-form-control>
+                                    </nz-form-item>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nz-tab>
+
+        </nz-tabset>
+    </nz-card>
+</div>

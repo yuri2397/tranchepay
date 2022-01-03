@@ -1,0 +1,157 @@
+<header id="header" class="d-flex align-items-center bg-once ">
+    <div class="container d-flex align-items-center justify-content-between">
+
+        <div class="logo">
+            <!-- <h1><a [routerLink]="index.html"><span>Bootslander</span></a></h1> -->
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <a [routerLink]="['/home']"><img src="/assets/img/logo.jpeg" alt="" class="img-fluid"></a>
+        </div>
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto text-green" [routerLink]="['/home/page-documentation']">DOCUMENTATION</a></li>
+                <li><a class="nav-link scrollto text-dark-green active" [routerLink]="['/home/page-commercant']">COMMERCANT</a></li>
+                <li><a class="nav-link scrollto text-green" [routerLink]="['/home/page-client']">PARTICULIER</a></li>
+                <li><a class="nav-link scrollto text-green" [routerLink]="['/home/page-contact']">CONTACT</a></li>
+                <li><a class="nav-link scrollto text-dark-green" [routerLink]="['/auth/login']">connexion</a></li>
+                <li><a class="nav-link scrollto btn btn-sm btn-new-account mx-3 px-2 py-1 text-dark-green" [routerLink]="['/auth/register']">creer un compte</a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle text-dark-green"></i>
+        </nav>
+        <!-- .navbar -->
+
+    </div>
+</header>
+<div class="hero ">
+    <div class="grid-container com-hero">
+        <div class="container-fluid home-footer p-5">
+            <div class="row mb-5">
+                <div class="col-md-6">
+                    <div class="px-5">
+                        <h1 class="text-white fw-xl">
+                            Lorem ipsum dolor sit amet, consectetur
+                        </h1>
+                        <p class="text-white">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, minima et? Necessitatibus error commodi vel aperiam repudiandae voluptates?
+                        </p>
+                        <button class="btn-2 my-4 btn shadow ">Télécharger l'API <i class=" mx-2 fa fa-link"
+                                aria-hidden="true"></i></button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div style="position: absolute; right: 20%; top: 100px">
+                        <img src="/assets/img/hero-img.png" width="300" alt="HERO IMAGE">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container mt-5">
+    <div class="row col-12">
+        <div class="col-5">
+            <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h3>
+        </div>
+    </div>
+    <div class="row justify-content-between">
+        <div class="col-5">
+            <div class="row">
+                <div class="col-12 my-5">
+                    <div class="card card-body raduis-sm shadow">
+                        <h4 class="text-dark-green fw-x">80% des Plateformes</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, totam nemo! consectetur adipisicing elit
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 mt-5">
+                    <h3 class="text-green bold">
+                        Lorem ipsum dolor sit amet,
+                    </h3>
+                    <br>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque quos cum quo molestiae consequ!
+                    </p>
+                    <br>
+                    <p>Modi iste tenetur ex maioresos, laboriosam nam atque aspernatur quibusdam cupiditate. Obcaecati, doloremque ea! At!</p>
+                    <br>
+                    <p>Reiciendis quidem ipsa facere eveniete libero voluptatem, error, inventore iste eligendi at! Atque, aliquam.</p>
+                    <br>
+                    <br>
+                    <div class="d-flex">
+                        <div>
+                            <a class="btn btn-sm btn-2 mx-3 px-2 py-1 " [routerLink]="['/auth/login']">CONNEXION</a>
+                        </div>
+                        <div>
+                            <a class="btn btn-sm text-green mx-3 px-2 py-1 " [routerLink]="['/auth/register']">Créer un compte</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-5 mt-5 text-center">
+            <h3 class="text-dark-green fw-md">Comment integrer TranchePay</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, asperiores rem voluptatem rerum? Neque, ex dicta.</p>
+            <section id="counts" class="counts">
+                <div class="container">
+                    <div class="row text-center ">
+                        <div class="col-lg-12 raduis-sm shadow col-md-6">
+                            <div class="count-box">
+                                <i class="bi bi-emoji-smile"></i>
+                                <div class="row justify-content-between align-items-center">
+                                    <div class="col-4">
+                                        <img src="/assets/img/computer.jpg" width="100%" alt="COMPUTER IMAGE">
+                                    </div>
+                                    <div class="col text-start">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat reprehenderit
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row text-center my-5">
+                        <div class="col-lg-12 shadow raduis-sm col-md-6">
+                            <div class="count-box">
+                                <i class="bi bi-emoji-smile"></i>
+                                <div class="row justify-content-between align-items-center">
+                                    <div class="col-4">
+                                        <img src="/assets/img/computer.jpg" width="100%" alt="COMPUTER IMAGE">
+                                    </div>
+                                    <div class="col text-start">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat reprehenderit
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-lg-12 raduis-sm shadow col-md-6">
+                            <div class="count-box">
+                                <i class="bi bi-emoji-smile"></i>
+                                <div class="row justify-content-between align-items-center">
+                                    <div class="col-4">
+                                        <img src="/assets/img/computer.jpg" width="100%" alt="COMPUTER IMAGE">
+                                    </div>
+                                    <div class="col text-start">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat reprehenderit
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <section class="about">
+        <div class="container my-3">
+            <div class="card card-body green-color shadow-sm raduis-sm">
+                <div class="text-center icon-boxes d-flex flex-column px-5 justify-content-center py-3">
+                    <h4 class=" text-tranche text-white">Enim quis est voluptatibus</h4>
+                    <p style="margin: auto; width: 60%" class="text-white">Esse voluptas cumque vel exercitationem. Reiciendis est hic accusamus. Non ipsam et sed minima temporibus laudantium. Soluta voluptate sed.</p>
+                    <button class="btn-jum my-2 btn btn-sm shadow bg-white text-dark-green p-2">CONTACTEZ NOUS</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

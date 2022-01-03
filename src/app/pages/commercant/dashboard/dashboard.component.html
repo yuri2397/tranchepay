@@ -1,0 +1,58 @@
+<div class="container-fluid">
+    <div class="row align-items-center">
+        <div class="col">
+            <nz-card class="shadow-sm" style="width:100%;">
+                <p>Card content</p>
+                <p>Card content</p>
+                <p>Card content</p>
+            </nz-card>
+        </div>
+        <div class="col">
+            <nz-card class="shadow-sm" style="width:100%;">
+                <p>Card content</p>
+                <p>Card content</p>
+                <p>Card content</p>
+            </nz-card>
+        </div>
+        <div class="col">
+            <nz-card class="shadow-sm" style="width:100%;">
+                <p>Card content</p>
+                <p>Card content</p>
+                <p>Card content</p>
+            </nz-card>
+        </div>
+        <div class="row my-4 mx-0 p-0 align-items-center">
+            <div class="col-12">
+                <nz-card class="shadow-sm" [nzTitle]="list_title">
+                    <nz-table #basicTable [nzData]="ventes">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Age</th>
+                                <th>Address</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let data of basicTable.data">
+                                <td>{{ data.name }}</td>
+                                <td>{{ data.age }}</td>
+                                <td>{{ data.address }}</td>
+                                <td>
+                                    <a>Action 一 {{ data.name }}</a>
+                                    <nz-divider nzType="vertical"></nz-divider>
+                                    <a>Delete</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </nz-table>
+
+                </nz-card>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #list_title>
+    <h3>Dérnières ventes</h3>
+</ng-template>

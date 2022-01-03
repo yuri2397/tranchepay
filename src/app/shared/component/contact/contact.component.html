@@ -1,0 +1,95 @@
+<header id="header" class="d-flex align-items-center bg-once ">
+    <div class="container d-flex align-items-center justify-content-between">
+
+        <div class="logo">
+            <a [routerLink]="['/home']"><img src="/assets/icons/logo.png" alt="" class="img-fluid"></a>
+        </div>
+
+        <nav id="navbar" class="navbar">
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto text-green" [routerLink]="['/home/page-documentation']">DOCUMENTATION</a></li>
+                    <li><a class="nav-link scrollto text-green" [routerLink]="['/home/page-commercant']">COMMERCANT</a></li>
+                    <li><a class="nav-link scrollto text-green" [routerLink]="['/home/page-client']">PARTICULIER</a></li>
+                    <li><a class="nav-link scrollto text-dark-green active" [routerLink]="['/home/page-contact']">CONTACT</a></li>
+                    <li><a class="nav-link scrollto text-dark-green" [routerLink]="['/auth/login']">connexion</a></li>
+                    <li><a class="nav-link scrollto btn btn-sm btn-new-account mx-3 px-2 py-1 text-dark-green" [routerLink]="['/auth/register']">creer un compte</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle text-dark-green"></i>
+            </nav>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+    </div>
+</header>
+<div class="hero-contact">
+
+</div>
+<main>
+    <div class="container mt-100">
+        <div class="my-5">
+            <h1 class="bold text-dark-green text-center">Contactez-nous <span class="text-green">dès maintenant</span>
+            </h1>
+        </div>
+
+        <div class="row">
+            <div class="card card-body shadow raduis-xm">
+                <div class="row px-4 my-2">
+                    <div class="col-md-7" data-aos="fade-right">
+                        <section id="contact" class="contact">
+                            <div class="container">
+
+                                <div class="section-title">
+                                    <p>Renseignez ce formulaire</p>
+                                    <span>Nous reviendrons vers vous dans les plus brefs délais.</span>
+                                </div>
+
+                                <form action="">
+                                    <div class="form-group my-4">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                            <label class="form-check-label" for="flexRadioDefault1">
+                                                Particulier
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                Commerçant
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="prenoms bold">Prénoms *</label>
+                                        <input type="text" class="form-control shadow-sm" id="prenoms" name="prenoms">
+                                    </div>
+                                    <div class="row my-4">
+                                        <div class="col form-group">
+                                            <label for="email">Email *</label>
+                                            <input type="email" class="form-control shadow-sm" id="email" name="email">
+                                        </div>
+                                        <div class="col form-group">
+                                            <label for="telephone">Téléphone *</label>
+                                            <input type="text" aria-label="telephone" aria-describedby="telephone" class="form-control shadow-sm" id="telephone" name="telephone">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="questions">Téléphone *</label>
+                                        <textarea rows="5" class="form-control shadow-sm" id="questions" name="questions"></textarea>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-md-5 align-self-end" data-aos="fade-left">
+                        <img src="/assets/img/questions.png" alt="QUESTION IMAGE" width="100%">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+</main>

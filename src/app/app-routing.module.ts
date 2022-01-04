@@ -1,3 +1,8 @@
+import { UnauthorizationComponent } from './shared/component/unauthorization/unauthorization.component';
+import { ClientGuard } from './guard/client.guard';
+import { CommercantGuard } from './guard/commercant.guard';
+import { PageNotFoundComponent } from './shared/component/page-not-found/page-not-found.component';
+import { AuthGuard } from './guard/auth.guard';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CommercantComponent } from './modules/commercant/commercant.component';
@@ -26,6 +31,7 @@ const routes: Routes = [
           import('./modules/commercant/commercant.module').then(
             (m) => m.CommercantModule
           ),
+        canActivate: [AuthGuard, CommercantGuard],
       },
     ],
   },
@@ -38,7 +44,12 @@ const routes: Routes = [
     path: 'client',
     loadChildren: () =>
       import('./modules/client/client.module').then((m) => m.ClientModule),
+    canActivate: [AuthGuard, ClientGuard],
   },
+  {
+    path: "**", component: PageNotFoundComponent
+  },
+  {path: "unauthorization", component: UnauthorizationComponent}
 ];
 
 @NgModule({

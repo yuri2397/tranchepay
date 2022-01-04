@@ -1,169 +1,189 @@
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-12">
-            <div class="card card-body shadow raduis-xm">
-                <nz-tabset [nzSize]="'large'">
-                    <nz-tab [nzTitle]="all_ventes_title">
-                        <nz-table #nzTable [nzData]="listOfDisplayData" nzTableLayout="fixed">
-                            <thead>
-                                <tr>
-                                    <th nzCustomFilter>
-                                        IDENTIFIANT
-                                        <nz-filter-trigger [(nzVisible)]="visible" [nzActive]="searchValue.length > 0" [nzDropdownMenu]="menu">
-                                            <i nz-icon nzType="search"></i>
-                                        </nz-filter-trigger>
-                                    </th>
-                                    <th>MONTANT</th>
-                                    <th>ETAT</th>
-                                    <th>DESCRIPTION</th>
-                                    <th>CLIENT</th>
-                                    <th>TELEPHONE</th>
-                                    <th>DATE</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr *ngFor="let data of nzTable.data">
-                                    <td>{{ data.name }}</td>
-                                    <td>{{ data.age }}</td>
-                                    <td>{{ data.address }}</td>
-                                </tr>
-                            </tbody>
-                        </nz-table>
-                        <nz-dropdown-menu #menu="nzDropdownMenu">
-                            <div class="ant-table-filter-dropdown">
-                                <div class="search-box">
-                                    <input type="text" nz-input placeholder="Search name" [(ngModel)]="searchValue" />
-                                    <button nz-button nzSize="small" nzType="primary" (click)="search()" class="search-button">Search</button>
-                                    <button nz-button nzSize="small" (click)="reset()">Reset</button>
-                                </div>
-                            </div>
-                        </nz-dropdown-menu>
-                    </nz-tab>
-                    <nz-tab [nzTitle]="en_cours_ventes_title">
-                        <nz-table #nzTable [nzData]="listOfDisplayData" nzTableLayout="fixed">
-                            <thead>
-                                <tr>
-                                    <th nzCustomFilter>
-                                        IDENTIFIANT
-                                        <nz-filter-trigger [(nzVisible)]="visible" [nzActive]="searchValue.length > 0" [nzDropdownMenu]="menu">
-                                            <i nz-icon nzType="search"></i>
-                                        </nz-filter-trigger>
-                                    </th>
-                                    <th>MONTANT</th>
-                                    <th>ETAT</th>
-                                    <th>DESCRIPTION</th>
-                                    <th>CLIENT</th>
-                                    <th>TELEPHONE</th>
-                                    <th>DATE</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr *ngFor="let data of nzTable.data">
-                                    <td>{{ data.name }}</td>
-                                    <td>{{ data.age }}</td>
-                                    <td>{{ data.address }}</td>
-                                </tr>
-                            </tbody>
-                        </nz-table>
-                        <nz-dropdown-menu #menu="nzDropdownMenu">
-                            <div class="ant-table-filter-dropdown">
-                                <div class="search-box">
-                                    <input type="text" nz-input placeholder="Search name" [(ngModel)]="searchValue" />
-                                    <button nz-button nzSize="small" nzType="primary" (click)="search()" class="search-button">Search</button>
-                                    <button nz-button nzSize="small" (click)="reset()">Reset</button>
-                                </div>
-                            </div>
-                        </nz-dropdown-menu>
-                    </nz-tab>
-                    <nz-tab [nzTitle]="terminer_ventes_title">
-                        <nz-table #nzTable [nzData]="listOfDisplayData" nzTableLayout="fixed">
-                            <thead>
-                                <tr>
-                                    <th nzCustomFilter>
-                                        IDENTIFIANT
-                                        <nz-filter-trigger [(nzVisible)]="visible" [nzActive]="searchValue.length > 0" [nzDropdownMenu]="menu">
-                                            <i nz-icon nzType="search"></i>
-                                        </nz-filter-trigger>
-                                    </th>
-                                    <th>MONTANT</th>
-                                    <th>ETAT</th>
-                                    <th>DESCRIPTION</th>
-                                    <th>CLIENT</th>
-                                    <th>TELEPHONE</th>
-                                    <th>DATE</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr *ngFor="let data of nzTable.data">
-                                    <td>{{ data.name }}</td>
-                                    <td>{{ data.age }}</td>
-                                    <td>{{ data.address }}</td>
-                                </tr>
-                            </tbody>
-                        </nz-table>
-                        <nz-dropdown-menu #menu="nzDropdownMenu">
-                            <div class="ant-table-filter-dropdown">
-                                <div class="search-box">
-                                    <input type="text" nz-input placeholder="Search name" [(ngModel)]="searchValue" />
-                                    <button nz-button nzSize="small" nzType="primary" (click)="search()" class="search-button">Search</button>
-                                    <button nz-button nzSize="small" (click)="reset()">Reset</button>
-                                </div>
-                            </div>
-                        </nz-dropdown-menu>
-                    </nz-tab>
-                    <nz-tab [nzTitle]="livrer_ventes_title">
-                        <nz-table #nzTable [nzData]="listOfDisplayData" nzTableLayout="fixed">
-                            <thead>
-                                <tr>
-                                    <th nzCustomFilter>
-                                        IDENTIFIANT
-                                        <nz-filter-trigger [(nzVisible)]="visible" [nzActive]="searchValue.length > 0" [nzDropdownMenu]="menu">
-                                            <i nz-icon nzType="search"></i>
-                                        </nz-filter-trigger>
-                                    </th>
-                                    <th>MONTANT</th>
-                                    <th>ETAT</th>
-                                    <th>DESCRIPTION</th>
-                                    <th>CLIENT</th>
-                                    <th>TELEPHONE</th>
-                                    <th>DATE</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr *ngFor="let data of nzTable.data">
-                                    <td>{{ data.name }}</td>
-                                    <td>{{ data.age }}</td>
-                                    <td>{{ data.address }}</td>
-                                </tr>
-                            </tbody>
-                        </nz-table>
-                        <nz-dropdown-menu #menu="nzDropdownMenu">
-                            <div class="ant-table-filter-dropdown">
-                                <div class="search-box">
-                                    <input type="text" nz-input placeholder="Search name" [(ngModel)]="searchValue" />
-                                    <button nz-button nzSize="small" nzType="primary" (click)="search()" class="search-button">Search</button>
-                                    <button nz-button nzSize="small" (click)="reset()">Reset</button>
-                                </div>
-                            </div>
-                        </nz-dropdown-menu>
-                    </nz-tab>
+<ng-container *ngIf="!isLoad; else loadData">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card card-body shadow raduis-xm">
+                    <div class="row">
+                        <div class="col">
+                            <nz-page-header (nzBack)="openCreateVenteModal()" [nzBackIcon]="ajouter_vente" nzTitle="Ajoute un vente"></nz-page-header>
+                        </div>
+                        <ng-template #ajouter_vente>
+                            <button nz-button nzType="primary" nzShape="round" class="shadow-sm my-2" nz-button nzType="primary">
+                            <mat-icon>add</mat-icon>
+                            </button>
+                        </ng-template>
 
-
-                </nz-tabset>
+                    </div>
+                    <nz-tabset [nzSize]="'large'">
+                        <nz-tab [nzTitle]="all_ventes_title">
+                            <nz-table #nzTableAll [nzData]="data.tous" nzTableLayout="fixed">
+                                <thead>
+                                    <tr>
+                                        <th nzCustomFilter>
+                                            IDENTIFIANT
+                                            <nz-filter-trigger [(nzVisible)]="visible" [nzActive]="searchValue.length>
+                                                0" [nzDropdownMenu]="menu">
+                                                <i nz-icon nzType="search"></i>
+                                            </nz-filter-trigger>
+                                        </th>
+                                        <th>MONTANT</th>
+                                        <th>CLIENT</th>
+                                        <th>TELEPHONE</th>
+                                        <th>DATE</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let data of nzTableAll.data">
+                                        <td>{{ data.id }}</td>
+                                        <td>{{ data.prix_total}}</td>
+                                        <td>{{ data.client.prenoms }} {{ data.client.nom }}</td>
+                                        <td>{{ data.client.telephone }}</td>
+                                        <td>{{ data.created_at | date }}</td>
+                                    </tr>
+                                </tbody>
+                            </nz-table>
+                            <nz-dropdown-menu #menu="nzDropdownMenu">
+                                <div class="ant-table-filter-dropdown">
+                                    <div class="search-box">
+                                        <input type="text" nz-input placeholder="Search name" [(ngModel)]="searchValue" />
+                                        <button nz-button nzSize="small" nzType="primary" (click)="search()" class="search-button">Search</button>
+                                        <button nz-button nzSize="small" (click)="reset()">Reset</button>
+                                    </div>
+                                </div>
+                            </nz-dropdown-menu>
+                        </nz-tab>
+                        <nz-tab [nzTitle]="en_cours_ventes_title">
+                            <nz-table #nzTableLoad [nzData]="data.en_cours" nzTableLayout="fixed">
+                                <thead>
+                                    <tr>
+                                        <th nzCustomFilter>
+                                            IDENTIFIANT
+                                            <nz-filter-trigger [(nzVisible)]="visible" [nzActive]="searchValue.length>
+                                                0" [nzDropdownMenu]="menu">
+                                                <i nz-icon nzType="search"></i>
+                                            </nz-filter-trigger>
+                                        </th>
+                                        <th>MONTANT</th>
+                                        <th>CLIENT</th>
+                                        <th>TELEPHONE</th>
+                                        <th>DATE</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let data of nzTableLoad.data">
+                                        <td>{{ data.id }}</td>
+                                        <td>{{ data.prix_total}}</td>
+                                        <td>{{ data.client.prenoms }} {{ data.client.nom }}</td>
+                                        <td>{{ data.client.telephone }}</td>
+                                        <td>{{ data.created_at | date }}</td>
+                                    </tr>
+                                </tbody>
+                            </nz-table>
+                            <nz-dropdown-menu #menu="nzDropdownMenu">
+                                <div class="ant-table-filter-dropdown">
+                                    <div class="search-box">
+                                        <input type="text" nz-input placeholder="Search name" [(ngModel)]="searchValue" />
+                                        <button nz-button nzSize="small" nzType="primary" (click)="search()" class="search-button">Search</button>
+                                        <button nz-button nzSize="small" (click)="reset()">Reset</button>
+                                    </div>
+                                </div>
+                            </nz-dropdown-menu>
+                        </nz-tab>
+                        <nz-tab [nzTitle]="terminer_ventes_title">
+                            <nz-table #nzTableFinish [nzData]="data.terminer" nzTableLayout="fixed">
+                                <thead>
+                                    <tr>
+                                        <th nzCustomFilter>
+                                            IDENTIFIANT
+                                            <nz-filter-trigger [(nzVisible)]="visible" [nzActive]="searchValue.length>
+                                                0" [nzDropdownMenu]="menu">
+                                                <i nz-icon nzType="search"></i>
+                                            </nz-filter-trigger>
+                                        </th>
+                                        <th>MONTANT</th>
+                                        <th>CLIENT</th>
+                                        <th>TELEPHONE</th>
+                                        <th>DATE</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let data of nzTableFinish.data">
+                                        <td>{{ data.id }}</td>
+                                        <td>{{ data.prix_total}}</td>
+                                        <td>{{ data.client.prenoms }} {{ data.client.nom }}</td>
+                                        <td>{{ data.client.telephone }}</td>
+                                        <td>{{ data.created_at | date }}</td>
+                                    </tr>
+                                </tbody>
+                            </nz-table>
+                            <nz-dropdown-menu #menu="nzDropdownMenu">
+                                <div class="ant-table-filter-dropdown">
+                                    <div class="search-box">
+                                        <input type="text" nz-input placeholder="Search name" [(ngModel)]="searchValue" />
+                                        <button nz-button nzSize="small" nzType="primary" (click)="search()" class="search-button">Search</button>
+                                        <button nz-button nzSize="small" (click)="reset()">Reset</button>
+                                    </div>
+                                </div>
+                            </nz-dropdown-menu>
+                        </nz-tab>
+                        <nz-tab [nzTitle]="livrer_ventes_title">
+                            <nz-table #nzTableOk [nzData]="data.livrer" nzTableLayout="fixed">
+                                <thead>
+                                    <tr>
+                                        <th nzCustomFilter>
+                                            IDENTIFIANT
+                                            <nz-filter-trigger [(nzVisible)]="visible" [nzActive]="searchValue.length>
+                                                0" [nzDropdownMenu]="menu">
+                                                <i nz-icon nzType="search"></i>
+                                            </nz-filter-trigger>
+                                        </th>
+                                        <th>MONTANT</th>
+                                        <th>CLIENT</th>
+                                        <th>TELEPHONE</th>
+                                        <th>DATE</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let data of nzTableOk.data">
+                                        <td>{{ data.id }}</td>
+                                        <td>{{ data.prix_total}}</td>
+                                        <td>{{ data.client.prenoms }} {{ data.client.nom }}</td>
+                                        <td>{{ data.client.telephone }}</td>
+                                        <td>{{ data.created_at | date }}</td>
+                                    </tr>
+                                </tbody>
+                            </nz-table>
+                            <nz-dropdown-menu #menu="nzDropdownMenu">
+                                <div class="ant-table-filter-dropdown">
+                                    <div class="search-box">
+                                        <input type="text" nz-input placeholder="Search name" [(ngModel)]="searchValue" />
+                                        <button nz-button nzSize="small" nzType="primary" (click)="search()" class="search-button">Search</button>
+                                        <button nz-button nzSize="small" (click)="reset()">Reset</button>
+                                    </div>
+                                </div>
+                            </nz-dropdown-menu>
+                        </nz-tab>
+                    </nz-tabset>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<ng-template #all_ventes_title>
-    <h5 class="bold text-primary">Tous</h5>
-</ng-template>
-<ng-template #en_cours_ventes_title>
-    <h5 class="bold text-danger">En cours</h5>
-</ng-template>
-<ng-template #terminer_ventes_title>
-    <h5 class="bold text-warning">Terminée</h5>
-</ng-template>
-<ng-template #livrer_ventes_title>
-    <h5 class="bold text-success">Cloturée/Livrée</h5>
+    <ng-template #all_ventes_title>
+        <h5 class="bold text-primary">Tous</h5>
+    </ng-template>
+    <ng-template #en_cours_ventes_title>
+        <h5 class="bold text-danger">En cours</h5>
+    </ng-template>
+    <ng-template #terminer_ventes_title>
+        <h5 class="bold text-warning">Terminée</h5>
+    </ng-template>
+    <ng-template #livrer_ventes_title>
+        <h5 class="bold text-success">Cloturée/Livrée</h5>
+    </ng-template>
+</ng-container>
+<ng-template #loadData>
+    <div>
+        <app-spinner></app-spinner>
+    </div>
 </ng-template>

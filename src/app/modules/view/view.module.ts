@@ -9,7 +9,6 @@ import { IndexComponent } from 'src/app/shared/component/index/index.component';
 import { ClientComponent } from 'src/app/shared/component/client/client.component';
 import { CommercantComponent } from 'src/app/shared/component/commercant/commercant.component';
 
-
 @NgModule({
   declarations: [
     ViewComponent,
@@ -17,7 +16,7 @@ import { CommercantComponent } from 'src/app/shared/component/commercant/commerc
     IndexComponent,
     ContactComponent,
     ClientComponent,
-    CommercantComponent
+    CommercantComponent,
   ],
   imports: [CommonModule, ViewRoutingModule],
 })

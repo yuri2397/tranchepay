@@ -1,57 +1,91 @@
-<div class="container-fluid">
-    <div class="row align-items-center">
-        <div class="col">
-            <nz-card class="shadow-sm" style="width:100%;">
-                <p>Card content</p>
-                <p>Card content</p>
-                <p>Card content</p>
-            </nz-card>
-        </div>
-        <div class="col">
-            <nz-card class="shadow-sm" style="width:100%;">
-                <p>Card content</p>
-                <p>Card content</p>
-                <p>Card content</p>
-            </nz-card>
-        </div>
-        <div class="col">
-            <nz-card class="shadow-sm" style="width:100%;">
-                <p>Card content</p>
-                <p>Card content</p>
-                <p>Card content</p>
-            </nz-card>
-        </div>
-        <div class="row my-4 mx-0 p-0 align-items-center">
-            <div class="col-12">
-                <nz-card class="shadow-sm" [nzTitle]="list_title">
-                    <nz-table #basicTable [nzData]="ventes">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Age</th>
-                                <th>Address</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr *ngFor="let data of basicTable.data">
-                                <td>{{ data.name }}</td>
-                                <td>{{ data.age }}</td>
-                                <td>{{ data.address }}</td>
-                                <td>
-                                    <a>Action 一 {{ data.name }}</a>
-                                    <nz-divider nzType="vertical"></nz-divider>
-                                    <a>Delete</a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </nz-table>
+<ng-container *ngIf="!isLoad; else loadData">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col">
+                <div class="card card-body raduis-sm shadow">
+                    <div>
+                        <h5>Revenu dans l'année</h5>
+                    </div>
+                    <div class="row align-items-center pb-1 section-title
+                        d-card">
+                        <div class="col">
+                            <h1>{{ data.annee }} FCFA</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card card-body raduis-sm shadow">
+                    <div>
+                        <h5>Revenu le mois passé</h5>
+                    </div>
+                    <div class="row align-items-center pb-1 section-title
+                        d-card">
+                        <div class="col">
+                            <h1>{{ data.mois }} FCFA</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card card-body raduis-sm shadow">
+                    <div>
+                        <h5>Ventes dans la journée</h5>
+                    </div>
+                    <div class="row align-items-center pb-1 section-title
+                        d-card">
+                        <div class="col">
+                            <h1>{{ data.jour }} FCFA</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row my-4 mx-0 p-0 align-items-center">
+                <div class="col-12">
+                    <div class="card card-body raduis-sm shadow">
+                        <nz-table #basicTable [nzPageSize]="5" [nzData]="data.ventes">
+                            <thead>
+                                <tr>
+                                    <th>#ID</th>
+                                    <th>Montant</th>
+                                    <th>Etat</th>
+                                    <th>Client</th>
+                                    <th>Téléphone</th>
+                                    <th>Produits</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let data of basicTable.data">
+                                    <td>{{ data.id }}</td>
+                                    <td>{{ data.prix_total }} FCFA</td>
+                                    <td>
+                                        <ng-container *ngIf="etatVente(data);
+                                            else etatVenteState">
+                                            <nz-tag [nzColor]="'green'">Payé entierement</nz-tag>
+                                        </ng-container>
+                                        <ng-template #etatVenteState>
+                                            <nz-tag [nzColor]="'red'">Payé entierement</nz-tag>
+                                        </ng-template>
+                                    </td>
+                                    <td>{{ data.client.prenoms }} {{ data.client.nom }}</td>
+                                    <td>{{ data.client.telephone }}</td>
+                                    <td>{{ data.nb_produits }} Produits</td>
+                                </tr>
+                            </tbody>
+                        </nz-table>
 
-                </nz-card>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</ng-container>
+<ng-template #loadData>
+    <div>
+        <app-spinner></app-spinner>
+    </div>
+</ng-template>
+
 
 <ng-template #list_title>
     <h3>Dérnières ventes</h3>

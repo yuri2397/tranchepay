@@ -11,6 +11,7 @@ import { DashboardComponent } from './../../pages/commercant/dashboard/dashboard
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CommercantComponent } from './commercant.component';
+import { AjouterVentesComponent } from 'src/app/pages/commercant/ventes/ajouter-ventes/ajouter-ventes.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'accueil'},
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'conditions', component: ConditionsComponent },
   { path: 'parrainages', component: ParrainagesComponent },
   { path: 'aide', component: AideComponent },
+  {path: 'add-vente', component: AjouterVentesComponent}
 ];
 
 @NgModule({

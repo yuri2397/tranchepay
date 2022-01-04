@@ -1,3 +1,5 @@
+import { AppModule } from './../../app.module';
+import { SpinnerComponent } from './../../shared/component/spinner/spinner.component';
 import { AideComponent } from './../../pages/commercant/aide/aide.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './../../pages/commercant/dashboard/dashboard.component';
@@ -30,6 +32,13 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzAlertModule } from 'ng-zorro-antd/alert';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzListModule } from 'ng-zorro-antd/list';
+import { NzSkeletonModule } from 'ng-zorro-antd/skeleton';
+import { NzTagModule } from 'ng-zorro-antd/tag';
+import { NzPageHeaderModule } from 'ng-zorro-antd/page-header';
+import { AjouterVentesComponent } from 'src/app/pages/commercant/ventes/ajouter-ventes/ajouter-ventes.component';
+import { NzModalModule } from 'ng-zorro-antd/modal';
+import { NzDrawerModule } from 'ng-zorro-antd/drawer';
+import { NzGridModule } from 'ng-zorro-antd/grid';
 
 @NgModule({
   declarations: [
@@ -43,6 +52,8 @@ import { NzListModule } from 'ng-zorro-antd/list';
     ConditionsComponent,
     ParrainagesComponent,
     AideComponent,
+    SpinnerComponent,
+    AjouterVentesComponent
   ],
   imports: [
     CommonModule,
@@ -59,6 +70,7 @@ import { NzListModule } from 'ng-zorro-antd/list';
     NzTabsModule,
     MatButtonModule,
     ReactiveFormsModule,
+    NzSkeletonModule,
     FormsModule,
     MatButtonModule,
     NzFormModule,
@@ -66,6 +78,11 @@ import { NzListModule } from 'ng-zorro-antd/list';
     NzButtonModule,
     NzAlertModule,
     NzSelectModule,
+    NzTagModule,
+    NzPageHeaderModule,
+    NzModalModule,
+    NzDrawerModule,
+    NzGridModule
   ],
 })
 export class CommercantModule {}

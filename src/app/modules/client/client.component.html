@@ -1,1 +1,141 @@
-<p>client works!</p>
+<ng-container *ngIf="!isLoad; else loadData">
+    <header id="header" class="d-flex align-items-center bg-once">
+        <div class="container d-flex align-items-center
+            justify-content-between">
+            <div class="logo">
+                <!-- <h1><a [routerLink]="index.html"><span>Bootslander</span></a></h1> -->
+                <!-- Uncomment below if you prefer to use an image logo -->
+                <a [routerLink]="['/']"><img src="/assets/img/logo.jpeg" alt="" class="img-fluid"></a>
+            </div>
+        </div>
+    </header>
+    <div class="hero-contact">
+
+    </div>
+    <main>
+        <div class="container" *ngIf="!isLoad == true; else loadData">
+            <div class="card card-body raduis-sm shadow my-5">
+                <nz-tabset [nzTabPosition]="'left'">
+                    <nz-tab [nzTitle]="mon_compte">
+                        <section id="contact" class="contact">
+                            <div class="container">
+                                <div class="section-title my-3 text-center">
+                                    <p>Heureux de vous revoir, {{ client.prenoms }}</p>
+                                </div>
+                                <button (click)="logout()">DECONNEXION</button>
+                            </div>
+                        </section>
+                    </nz-tab>
+                    <nz-tab [nzTitle]="produit"></nz-tab>
+                    <nz-tab [nzTitle]="suivi"></nz-tab>
+                    <nz-tab [nzTitle]="porte_feille"></nz-tab>
+                </nz-tabset>
+            </div>
+        </div>
+
+    </main>
+
+    <ng-template #mon_compte>
+        <h5>Mon compte</h5>
+    </ng-template>
+    <ng-template #profile>
+        <h5>Profil</h5>
+    </ng-template>
+    <ng-template #produit>
+        <h5>Produits</h5>
+    </ng-template>
+    <ng-template #suivi>
+        <h5>Suivi</h5>
+    </ng-template>
+    <ng-template #porte_feille>
+        <h5>Porte feuille</h5>
+    </ng-template>
+
+
+    <footer class="my-3">
+        <div class="container">
+            <div class="d-flex my-5">
+                <div class="col-md-4 mb-5">
+                    <div>
+                        <a href="/">
+                            <img src="/assets/img/logo.jpeg" alt="LOGO" width="100"></a>
+                    </div>
+                    <div class="text-muted my-3">
+                        Lorem ipsum dolor sit amet consectetur, Temporibus earum necessitatibus itaque.
+                    </div>
+                    <div class="my-3">
+                        <div class="row">
+                            <div class="col-md-2 mx-1 circle-icon">
+                                <i class="fa fa-facebook" aria-hidden="false"></i>
+                            </div>
+                            <div class="col-md-2 mx-1 circle-icon">
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-md-2 mx-1 circle-icon">
+                                <i class="fa fa-linkedin" aria-hidden="false"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <span class="text-dark">
+                        Retrouver nous sur les plateformes
+                    </span> <br>
+                    <div>
+                        <div class="row container d-flex
+                            justify-content-center">
+                            <div class="template-demo mt-2"> <button class="btn
+                                    btn-outline-dark btn-icon-text"> <i
+                                        class="fa fa-apple btn-icon-prepend
+                                        mdi-36px"></i> <span
+                                        class="d-inline-block text-left"> <small
+                                            class="font-weight-light d-block">Available
+                                            on the</small> App Store </span>
+                                </button> <button class="btn btn-outline-dark
+                                    btn-icon-text"> <i
+                                        class="fa fa-android btn-icon-prepend
+                                        mdi-36px"></i> <span
+                                        class="d-inline-block text-left"> <small
+                                            class="font-weight-light d-block">Get
+                                            it
+                                            on the</small> Google Play </span>
+                                </button> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="list-service">
+                                <strong>Services</strong>
+                                <li>Service 1</li>
+                                <li>Service 2</li>
+                                <li>Service 3</li>
+                                <li>Service 4</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-service">
+                                <strong>Ressources</strong>
+                                <li>Service 1</li>
+                                <li>Service 2</li>
+                                <li>Service 3</li>
+                                <li>Service 4</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <div class="green-color px-5 py-3">
+        <h6 class="text-white">&copy; tous droits reservé</h6>
+    </div>
+</ng-container>
+<ng-template #loadData>
+    <div class="center">
+        <h1>Load...</h1>
+    </div>
+</ng-template>

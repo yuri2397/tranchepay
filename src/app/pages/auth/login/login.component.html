@@ -2,7 +2,7 @@
     <div class="container d-flex align-items-center justify-content-between">
 
         <div class="logo">
-            <a [routerLink]="['/home']"><img src="/assets/icons/logo.png" alt="" class="img-fluid"></a>
+            <a [routerLink]="['/home']"><img src="/assets/img/logo2.png" alt="" class="img-fluid"></a>
         </div>
 
     </div>
@@ -13,18 +13,18 @@
 <main>
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-md-6 col-sm-10 m-auto">
+            <div class="col-md-5 col-sm-12 m-auto">
                 <div class="card login-card-bg  shadow raduis-sm">
                     <div class="card-body">
                         <h3 class="">Connexion</h3>
-                        <form class="form my-3">
+                        <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()" class="form my-3">
                             <div class="form-group my-3">
-                                <label for="prenoms bold">Numéro téléphone</label>
-                                <input type="text" class="form-control shadow-sm" id="prenoms" name="prenoms">
+                                <label for="username bold">Numéro téléphone</label>
+                                <input type="text" class="form-control shadow-sm" nz-input formControlName="username" id="username" name="username">
                             </div>
                             <div class="form-group my-3">
-                                <label for="prenoms bold">Mot de passe</label>
-                                <input type="text" class="form-control shadow-sm" id="prenoms" name="prenoms">
+                                <label for="password bold">Mot de passe</label>
+                                <input type="text" formControlName="password" class="form-control shadow-sm" id="password" name="password">
                             </div>
                             <div class="details row justify-items-between my-4">
                                 <div class="col-6">
@@ -39,7 +39,7 @@
                                     <a [routerLink]="['/home']" class="forget-pwd">Mot de passe oublié?</a>
                                 </div>
                             </div>
-                            <button class="btn btn-1 btn-block col-12 mb-3" type="submit">CONNEXION</button>
+                            <button nz-button (click)="login()" [nzLoading]="isLoad" class="bg" [disabled]="!validateForm.valid" class="btn btn-1 btn-block col-12 mb-3" type="submit">CONNEXION</button>
 
                             <div class="text-center mt-3">
                                 <span class="text- text-center">Vous n'avez pas de compte? <a [routerLink]="['/auth/register']" class="text-dark-green">Crée votre compte</a> </span>
